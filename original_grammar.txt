@@ -1,0 +1,32 @@
+P->Dp 
+P->Sp 
+Dp->~ 
+Dp->Dp D
+Sp->S 
+Sp->Sp ; S
+D->T d 
+D->T d [ Ip ]
+D->T d ( Dp ) { Dp Sp }
+T->int 
+T->float 
+T->void 
+Ip->i 
+Ip->Ip , i 
+S->d = E
+S->if ( B ) S
+S->if ( B ) S else S
+S->while ( B ) S
+S->return E
+S->{ Sp }
+S->d ( Ep )
+Ep->E 
+Ep->Ep , E
+E->i 
+E->d 
+E->d [ Ep ]
+E->d ( Ep )
+E->E + E
+E->E * E
+B->E r E
+B->E 
+#

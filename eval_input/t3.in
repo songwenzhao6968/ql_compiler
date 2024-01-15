@@ -1,0 +1,13 @@
+int num[100];
+num[20] = 20;
+void inc(int til)
+{
+num[til] = til + 1;
+}
+int cnt;
+cnt = 0;
+while(num[cnt]==0)
+{
+inc(cnt);
+cnt = cnt +1;
+}
